@@ -8,14 +8,18 @@ class Dec2Hex
     public static void main(String args[])
     {
 
-	//Scanner myScanner = new Scanner(System.in);
+	Scanner scan = new Scanner(System.in);
 	
-
-
-        if (args.length == 0) 
-        {
-		System.out.println("Please enter an integer.");
-	} else if (args.length > 0) {
+	System.out.println("Please enter a number.");
+	
+	while(!scan.hasNextInt()) {
+		System.out.println("Please enter a valid number.");
+		scan.next();
+	} 
+	
+	Arg1 = scan.nextInt();
+      
+	if (args.length > 0) {
             try 
             {
                 Arg1 = Integer.parseInt(args[0]);
